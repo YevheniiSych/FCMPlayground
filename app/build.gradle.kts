@@ -69,4 +69,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(platform(libs.firebase.bom))
+
+    implementation(libs.firebase.messaging)
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
 }
