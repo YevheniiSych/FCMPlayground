@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "16103394684",
+    "project_id": "fcm-playground-6b521",
+    "storage_bucket": "fcm-playground-6b521.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16103394684:android:79331b024700b551d968f9",
+        "android_client_info": {
+          "package_name": "com.fcmplayground"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAylUZwNn3Vm6vahWQe3aaV4reHXKShijw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
