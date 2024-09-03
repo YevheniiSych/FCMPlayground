@@ -9,7 +9,10 @@ import com.fcmplayground.ChatState
 import com.fcmplayground.FcmApi
 import com.fcmplayground.NotificationBody
 import com.fcmplayground.SendMessageDto
+import com.google.firebase.Firebase
+import com.google.firebase.messaging.messaging
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -26,6 +29,12 @@ class ChatViewModel : ViewModel() {
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
         .create()
+
+    init {
+        viewModelScope.launch {
+            Firebase.messaging.subscribeToTopic("chat").await()
+        }
+    }
 
     //All 3 methods below should be united into event class
     fun onRemoteTokenChange(newToken: String) {
